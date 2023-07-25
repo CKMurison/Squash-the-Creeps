@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1690278843
+default_bus_layout.tres::AudioBusLayout::-1::1606422568::0::1::::<><>::
+default_env.tres::Environment::-1::1606481742::0::1::::<><>::
+icon.png::CompressedTexture2D::2205956788234560007::1605977320::1690276481::1::::<><>::
+main.tscn::PackedScene::4035962853718945689::1690278642::0::1::::<><>::
+::res://art/::1690276456
+body.material::StandardMaterial3D::-1::1605876108::0::1::::<><>::
+eye.material::StandardMaterial3D::-1::1606481742::0::1::::<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis::2240610226220964831::1580841608::1690276456::1::::<><>::
+mob.glb::PackedScene::5828724607040229774::1606481580::1690276456::1::::<><>::
+mob_body.material::StandardMaterial3D::-1::1606481742::0::1::::<><>::
+mob_eye.material::StandardMaterial3D::-1::1605937414::0::1::::<><>::
+player.glb::PackedScene::5480715122633545155::1606481658::1690276456::1::::<><>::
+pupil.material::StandardMaterial3D::-1::1606481742::0::1::::<><>::
+::res://fonts/::1690276481
+LICENSE.txt::TextFile::-1::1605956052::0::1::::<><>::
+Montserrat-Medium.ttf::FontFile::2434422028500400620::1323666000::1690276481::1::::<><>::
