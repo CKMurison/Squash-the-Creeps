@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxrbyovp2e5qr"]
+[gd_scene load_steps=5 format=3 uid="uid://bxrbyovp2e5qr"]
+
+[ext_resource type="PackedScene" uid="uid://ckc5tvnjhqahf" path="res://art/player.glb" id="1_i8etk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uigji"]
 size = Vector3(60, 2, 60)
@@ -6,10 +8,13 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_rl7lq"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_002pd"]
+radius = 1.04764
+
 [node name="Main" type="Node"]
 
 [node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08036, -3.85819, -4.84246)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08036, -1.99991, -4.84246)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179649, 0.227684, 0.589882)
@@ -21,5 +26,17 @@ mesh = SubResource("BoxMesh_rl7lq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.280382, 0.959889, 2.90664e-09, -0.716979, -0.209428, 0.664892, 0.638222, 0.186424, 0.74694, -111.962, 160.598, -4.84605)
-light_color = Color(0.952941, 0.447059, 1, 1)
+light_color = Color(0, 0, 0, 1)
 shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.667607, 0, -0.0159546)
+
+[node name="Pivot" type="Node3D" parent="Player"]
+
+[node name="Character" parent="Player/Pivot" instance=ExtResource("1_i8etk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.611987, 0.579178, 0.082911)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.973111, 0, 0.230338, 0, 1, 0, -0.230338, 0, 0.973111, -0.573739, 0.58338, 0.0542709)
+shape = SubResource("SphereShape3D_002pd")
